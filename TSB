@@ -1,0 +1,858 @@
+local VLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/vep1032/VepStuff/main/VL"))()
+
+local s = VLib:Window("Alkorv Moveset Hub", "TSB", "😏")
+
+-- Movesets Tab
+local movesetTab = s:Tab("Movesets")
+
+movesetTab:Button("KJ Moveset (The Strongest Hero)", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/RathaTepmanuth10/Kj-script-/main/Kj"))()
+end)
+
+movesetTab:Button("Gojo Moveset (The Strongest Hero)", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/skibiditoiletfan2007/BaldyToSorcerer/main/Latest.lua"))()
+end)
+
+movesetTab:Button("Apophenia V2 Moveset (Brutal Demon)", function()
+    getgenv().Music = false
+    getgenv().AttackQuality = 'High'
+    getgenv().ConstantSpeed = false
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Reapvitalized/TSB/main/APOPHENIA.lua"))()
+end)
+
+movesetTab:Button("Kyra Gojo Moveset (The Strongest Hero)", function()
+    loadstring(game:HttpGet("https://rawscripts.net/raw/The-Strongest-Battlegrounds-Hero-to-True-Nosakatan-18742"))()
+end)
+
+movesetTab:Button("True Nosakatan Moveset (The Strongest Hero)", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/RathaTepmanuth10/Kj-script-/main/Kj"))()
+end)
+
+movesetTab:Button("Dio Moveset (Hero Hunter)", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Medley-Taboritsky/RobloxScripting/refs/heads/main/DIO_Garou_TSB"))()
+end)
+
+movesetTab:Button("Jun Moveset (The Strongest Hero)", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/Kenjihin69/Kenjihin69/refs/heads/main/Tp%20exploit%20saitama%20to%20jun'))()
+end)
+
+movesetTab:Button("Sonic Moveset (Hero Hunter)", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Darker-TheDarkestGuy/Scripts/refs/heads/main/Sonic%20Moveset"))()
+end)
+
+movesetTab:Button("Sukuna Moveset (Blade Master)", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/zyrask/Nexus-Base/main/atomic-blademaster%20to%20sukuna"))()
+end)
+
+movesetTab:Button("Toji Moveset (Deadly Ninja)", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Wi-sp/Limitless-legacy/refs/heads/main/GUI"))()
+end)
+
+movesetTab:Button("Goku Ui Moveset (Hero Hunter)", function()
+    loadstring(game:HttpGet("https://rawscripts.net/raw/The-Strongest-Battlegrounds-Goku-Moveset-V2-17977"))()
+end)
+
+movesetTab:Button("KJ Moveset (The Strongest Hero)", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/RathaTepmanuth10/Kj-script-/main/Kj"))()
+end)
+
+movesetTab:Button("Scripter/Developer Moveset (The Strongest Hero)", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/JE8sEbcw"))()
+end)
+
+movesetTab:Button("Sukuna V2 Moveset (The Strongest Hero)", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/h8h88/hubfr/main/hubfr"))()
+end)
+
+movesetTab:Button("Jotaro Moveset (Hero Hunter)", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/h8h88/hubfr/main/hubfr"))()
+end)
+
+movesetTab:Button("Arcaura/Jester Moveset (Hero Hunter)", function()
+    loadstring(game:HttpGet("https://rawscripts.net/raw/The-Strongest-Battlegrounds-ARACAURA-script-unfinished-credits-to-reap-19779"))()
+end)
+
+movesetTab:Button("A-Train Moveset (The Strongest Hero)", function()
+    loadstring(game:HttpGet("https://github.com/l0ckerV5/Roblox-Scripts/raw/main/The%20Strongest%20Battlegrounds/Custom%20Character/A-Train"))()
+end)
+
+movesetTab:Button("Goku Moveset (Hero Hunter)", function()
+    loadstring(game:HttpGet("https://rawscripts.net/raw/The-Strongest-Battlegrounds-Hero-hunter-moveset-into-OP-goku-moveset-17468"))()
+end)
+
+movesetTab:Button("Mahito Moveset (The Strongest Hero)", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/VoidExploit/Mahito/refs/heads/main/PremiumMahito"))()
+end)
+
+movesetTab:Button("Mastery Tatsumaki Moveset (Wild Psychic)", function()
+    -- Function to handle animation detection and replacement
+    local function handleAnimationDetection(animIdsToStop, replacementAnimId, animSpeed)
+        local player = game.Players.LocalPlayer
+        local character = player.Character or player.CharacterAdded:Wait()
+        local humanoid = character:WaitForChild("Humanoid")
+
+        local function onAnimPlayed(animationTrack)
+            local animId = tonumber(string.match(animationTrack.Animation.AnimationId, "%d+"))
+        
+            for _, stopId in ipairs(animIdsToStop) do
+                if animId == stopId then
+                    animationTrack:Stop()
+                    local replacementAnimation = Instance.new("Animation")
+                    replacementAnimation.AnimationId = "rbxassetid://" .. replacementAnimId
+                    local replacementTrack = humanoid:LoadAnimation(replacementAnimation)
+                    replacementTrack:Play()
+                    replacementTrack:AdjustSpeed(animSpeed) -- Adjust the speed of the replacement animation
+                    break
+                end
+            end
+        end
+    
+        humanoid.AnimationPlayed:Connect(onAnimPlayed)
+    end
+
+    -- First set of animations
+    local firstAnimIdsToStop = {16139108718}
+    local firstReplacementAnimId = 17120709682
+    local firstAnimspeed = 1
+    handleAnimationDetection(firstAnimIdsToStop, firstReplacementAnimId, firstAnimspeed)
+
+    -- Second set of animations
+    local secondAnimIdsToStop = {16515850153}
+    local secondReplacementAnimId = 15121659862
+    local secondAnimspeed = 1
+    handleAnimationDetection(secondAnimIdsToStop, secondReplacementAnimId, secondAnimspeed)
+
+    -- Third set of animations
+    local thirdAnimIdsToStop = {16431491215}
+    local thirdReplacementAnimId = 18897119503
+    local thirdAnimspeed = 1
+    handleAnimationDetection(thirdAnimIdsToStop, thirdReplacementAnimId, thirdAnimspeed)
+
+    -- Fourth set of animations
+    local fourthAnimIdsToStop = {16597322398}
+    local fourthReplacementAnimId = 18464356233
+    local fourthAnimspeed = 1
+    handleAnimationDetection(fourthAnimIdsToStop, fourthReplacementAnimId, fourthAnimspeed)
+
+    -- First set of animations
+    local firstAnimIdsToStop = {16737255386}
+    local firstReplacementAnimId = 13721154327
+    local firstAnimspeed = 0.4
+    handleAnimationDetection(firstAnimIdsToStop, firstReplacementAnimId, firstAnimspeed)
+
+    -- Second set of animations
+    local secondAnimIdsToStop = {17464644182}
+    local secondReplacementAnimId = 18896127525
+    local secondAnimspeed = 1
+    handleAnimationDetection(secondAnimIdsToStop, secondReplacementAnimId, secondAnimspeed)
+
+    -- Third set of animations
+    local thirdAnimIdsToStop = {17278415853}
+    local thirdReplacementAnimId = 18464351556
+    local thirdAnimspeed = 1
+    handleAnimationDetection(thirdAnimIdsToStop, thirdReplacementAnimId, thirdAnimspeed)
+
+    -- Fourth set of animations
+    local fourthAnimIdsToStop = {17889080495}
+    local fourthReplacementAnimId = 18464356233
+    local fourthAnimspeed = 0.8
+    handleAnimationDetection(fourthAnimIdsToStop, fourthReplacementAnimId, fourthAnimspeed)
+end)
+
+movesetTab:Button("Mastery Atomic Samurai Moveset (Blade Master)", function()
+    -- Function to handle animation detection and replacement
+    local function handleAnimationDetection(animIdsToStop, replacementAnimId, animSpeed)
+        local player = game.Players.LocalPlayer
+        local character = player.Character or player.CharacterAdded:Wait()
+        local humanoid = character:WaitForChild("Humanoid")
+
+        local function onAnimPlayed(animationTrack)
+            local animId = tonumber(string.match(animationTrack.Animation.AnimationId, "%d+"))
+            
+            for _, stopId in ipairs(animIdsToStop) do
+                if animId == stopId then
+                    animationTrack:Stop()
+                    local replacementAnimation = Instance.new("Animation")
+                    replacementAnimation.AnimationId = "rbxassetid://" .. replacementAnimId
+                    local replacementTrack = humanoid:LoadAnimation(replacementAnimation)
+                    replacementTrack:Play()
+                    replacementTrack:AdjustSpeed(animSpeed) -- Adjust the speed of the replacement animation
+                    break
+                end
+            end
+        end
+        
+        humanoid.AnimationPlayed:Connect(onAnimPlayed)
+    end
+
+    -- First set of animations
+    local firstAnimIdsToStop = {15290930205}
+    local firstReplacementAnimId = 15436668469
+    local firstAnimspeed = 1.2
+    handleAnimationDetection(firstAnimIdsToStop, firstReplacementAnimId, firstAnimspeed)
+
+    -- Second set of animations
+    local secondAnimIdsToStop = {15145462680}
+    local secondReplacementAnimId = 15436668469
+    local secondAnimspeed = 1
+    handleAnimationDetection(secondAnimIdsToStop, secondReplacementAnimId, secondAnimspeed)
+
+    -- Third set of animations
+    local thirdAnimIdsToStop = {15295895753}
+    local thirdReplacementAnimId = 13309500827
+    local thirdAnimspeed = 0.7
+    handleAnimationDetection(thirdAnimIdsToStop, thirdReplacementAnimId, thirdAnimspeed)
+
+    -- Third set of animations
+    local thirdAnimIdsToStop = {15311685628}
+    local thirdReplacementAnimId = 14406991505
+    local thirdAnimspeed = 1
+    handleAnimationDetection(thirdAnimIdsToStop, thirdReplacementAnimId, thirdAnimspeed)
+
+    -- Third set of animations
+    local thirdAnimIdsToStop = {16062712948}
+    local thirdReplacementAnimId = 13633468484
+    local thirdAnimspeed = 0.9
+    handleAnimationDetection(thirdAnimIdsToStop, thirdReplacementAnimId, thirdAnimspeed)
+
+    -- Third set of animations
+    local thirdAnimIdsToStop = {15334974550}
+    local thirdReplacementAnimId = 13639700348
+    local thirdAnimspeed = 0.6
+    handleAnimationDetection(thirdAnimIdsToStop, thirdReplacementAnimId, thirdAnimspeed)
+
+    -- Third set of animations
+    local thirdAnimIdsToStop = {15391323441}
+    local thirdReplacementAnimId = 16082123712
+    local thirdAnimspeed = 0.6
+    handleAnimationDetection(thirdAnimIdsToStop, thirdReplacementAnimId, thirdAnimspeed)
+end)
+
+movesetTab:Button("Mastery Atomic Samurai V2 (Blade Master)", function()
+    loadstring(game:HttpGet("https://gist.githubusercontent.com/envix2759/c44be0f240a1b157b1723deb69bdd212/raw/af95b54853ba82fcb164c0c693c67b246e7a3cc6/gistfile1.txt"))()
+end)
+
+movesetTab:Button("Mastery Saitama Moveset (The Strongest Hero)", function()
+    -- Function to handle animation detection and replacement
+    local function handleAnimationDetection(animIdsToStop, replacementAnimId, animSpeed)
+        local player = game.Players.LocalPlayer
+        local character = player.Character or player.CharacterAdded:Wait()
+        local humanoid = character:WaitForChild("Humanoid")
+
+        local function onAnimPlayed(animationTrack)
+            local animId = tonumber(string.match(animationTrack.Animation.AnimationId, "%d+"))
+            
+            for _, stopId in ipairs(animIdsToStop) do
+                if animId == stopId then
+                    animationTrack:Stop()
+                    local replacementAnimation = Instance.new("Animation")
+                    replacementAnimation.AnimationId = "rbxassetid://" .. replacementAnimId
+                    local replacementTrack = humanoid:LoadAnimation(replacementAnimation)
+                    replacementTrack:Play()
+                    replacementTrack:AdjustSpeed(animSpeed) -- Adjust the speed of the replacement animation
+                    break
+                end
+            end
+        end
+        
+        humanoid.AnimationPlayed:Connect(onAnimPlayed)
+    end
+
+    -- First set of animations
+    local firstAnimIdsToStop = {10468665991}
+    local firstReplacementAnimId = 18896127525
+    local firstAnimspeed = 1.7
+    handleAnimationDetection(firstAnimIdsToStop, firstReplacementAnimId, firstAnimspeed)
+
+    -- Second set of animations
+    local secondAnimIdsToStop = {10466974800}
+    local secondReplacementAnimId = 12273188754
+    local secondAnimspeed = 1
+    handleAnimationDetection(secondAnimIdsToStop, secondReplacementAnimId, secondAnimspeed)
+
+    -- Third set of animations
+    local thirdAnimIdsToStop = {10471336737}
+    local thirdReplacementAnimId = 13501296372
+    local thirdAnimspeed = 0.8
+    handleAnimationDetection(thirdAnimIdsToStop, thirdReplacementAnimId, thirdAnimspeed)
+
+    -- Third set of animations
+    local thirdAnimIdsToStop = {12510170988}
+    local thirdReplacementAnimId = 18179181663
+    local thirdAnimspeed = 1
+    handleAnimationDetection(thirdAnimIdsToStop, thirdReplacementAnimId, thirdAnimspeed)
+
+    --Third set of animations
+    local thirdAnimIdsToStop = {15955393872}
+    local thirdReplacementAnimId = 15943915877
+    local thirdAnimspeed = 1
+    handleAnimationDetection(thirdAnimIdsToStop, thirdReplacementAnimId, thirdAnimspeed)
+
+    --Third set of animations u
+    local thirdAnimIdsToStop = {12447707844}
+    local thirdReplacementAnimId = 17464923657
+    local thirdAnimspeed = 1
+    handleAnimationDetection(thirdAnimIdsToStop, thirdReplacementAnimId, thirdAnimspeed)
+
+    --Third set of animations
+    local thirdAnimIdsToStop = {11343318134}
+    local thirdReplacementAnimId = 12273188754
+    local thirdAnimspeed = 0.2
+    handleAnimationDetection(thirdAnimIdsToStop, thirdReplacementAnimId, thirdAnimspeed)
+
+    --Third set of animations
+    local thirdAnimIdsToStop = {11365563255}
+    local thirdReplacementAnimId = 18897120868
+    local thirdAnimspeed = 0.3
+    handleAnimationDetection(thirdAnimIdsToStop, thirdReplacementAnimId, thirdAnimspeed)
+
+    --Third set of animations
+    local thirdAnimIdsToStop = {12983333733}
+    local thirdReplacementAnimId = 13294790250
+    local thirdAnimspeed = 0.20
+    handleAnimationDetection(thirdAnimIdsToStop, thirdReplacementAnimId, thirdAnimspeed)
+
+    --Third set of animations
+    local thirdAnimIdsToStop = {10479335397}
+    local thirdReplacementAnimId = 17838006839
+    local thirdAnimspeed = 1
+    handleAnimationDetection(thirdAnimIdsToStop, thirdReplacementAnimId, thirdAnimspeed)
+end)
+
+movesetTab:Button("Mastery Garou Moveset (Hero Hunter)", function()
+    -- Function to handle animation detection and replacement
+    local function handleAnimationDetection(animIdsToStop, replacementAnimId, animSpeed)
+        local player = game.Players.LocalPlayer
+        local character = player.Character or player.CharacterAdded:Wait()
+        local humanoid = character:WaitForChild("Humanoid")
+
+        local function onAnimPlayed(animationTrack)
+            local animId = tonumber(string.match(animationTrack.Animation.AnimationId, "%d+"))
+            
+            for _, stopId in ipairs(animIdsToStop) do
+                if animId == stopId then
+                    animationTrack:Stop()
+                    local replacementAnimation = Instance.new("Animation")
+                    replacementAnimation.AnimationId = "rbxassetid://" .. replacementAnimId
+                    local replacementTrack = humanoid:LoadAnimation(replacementAnimation)
+                    replacementTrack:Play()
+                    replacementTrack:AdjustSpeed(animSpeed) -- Adjust the speed of the replacement animation
+                    break
+                end
+            end
+        end
+        
+        humanoid.AnimationPlayed:Connect(onAnimPlayed)
+    end
+
+    -- First set of animations
+    local firstAnimIdsToStop = {12273188754}
+    local firstReplacementAnimId = 12534735382
+    local firstAnimspeed = 1
+    handleAnimationDetection(firstAnimIdsToStop, firstReplacementAnimId, firstAnimspeed)
+
+    -- Second set of animations
+    local secondAnimIdsToStop = {12296113986}
+    local secondReplacementAnimId = 12502664044
+    local secondAnimspeed = 1
+    handleAnimationDetection(secondAnimIdsToStop, secondReplacementAnimId, secondAnimspeed)
+
+    -- Third set of animations
+    local thirdAnimIdsToStop = {12309835105}
+    local thirdReplacementAnimId = 13501296372
+    local thirdAnimspeed = 1
+    handleAnimationDetection(thirdAnimIdsToStop, thirdReplacementAnimId, thirdAnimspeed)
+
+    -- Fourth set of animations D
+    local fourthAnimIdsToStop = {13603396939}
+    local fourthReplacementAnimId = 15943915877
+    local fourthAnimspeed = 1
+    handleAnimationDetection(fourthAnimIdsToStop, fourthReplacementAnimId, fourthAnimspeed)
+
+    --Fourth set of animations (no effects here)
+    local fourthAnimIdsToStop = {12342141464}
+    local fourthReplacementAnimId = 18435303746
+    local fourthAnimspeed = 1
+    handleAnimationDetection(fourthAnimIdsToStop, fourthReplacementAnimId, fourthAnimspeed)
+
+    --Fourth set of animations (no effects here)
+    local fourthAnimIdsToStop = {12460977270}
+    local fourthReplacementAnimId = 10466974800
+    local fourthAnimspeed = 1
+    handleAnimationDetection(fourthAnimIdsToStop, fourthReplacementAnimId, fourthAnimspeed)
+
+    --Fourth set of animations (no effects here)
+    local fourthAnimIdsToStop = {12467789963}
+    local fourthReplacementAnimId = 10468665991
+    local fourthAnimspeed = 1
+    handleAnimationDetection(fourthAnimIdsToStop, fourthReplacementAnimId, fourthAnimspeed)
+
+    --Fourth set of animations (no effects here)
+    local fourthAnimIdsToStop = {14057231976}
+    local fourthReplacementAnimId = 13073745835
+    local fourthAnimspeed = 0.7
+    handleAnimationDetection(fourthAnimIdsToStop, fourthReplacementAnimId, fourthAnimspeed)
+
+    --Fourth set of animations (no effects here)
+    local fourthAnimIdsToStop = {13630786846}
+    local fourthReplacementAnimId = 12832505612
+    local fourthAnimspeed = 1
+    handleAnimationDetection(fourthAnimIdsToStop, fourthReplacementAnimId, fourthAnimspeed)
+
+    --Fourth set of animations (no effects here)
+    local fourthAnimIdsToStop = {10479335397}
+    local fourthReplacementAnimId = 17838006839
+    local fourthAnimspeed = 1
+    handleAnimationDetection(fourthAnimIdsToStop, fourthReplacementAnimId, fourthAnimspeed)
+end)
+
+movesetTab:Button("Sans Moveset (Wild Psychic)", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Qaiddanial2904/ROBLOX-FREAKY-GOJO-REAL/refs/heads/main/SANS%20%5BREDACTED%5D"))()
+end)
+
+movesetTab:Button("Unsealed Gojo Moveset (The Strongest Hero)", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Giahao135/Tokyo/refs/heads/main/Tokyo"))()
+end)
+
+movesetTab:Button("Shibuya Toji Moveset (The Strongest Hero)", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/6ixware/test/refs/heads/main/toji",true))()
+end)
+
+movesetTab:Button("Zoro Moveset (Blade Master)", function()
+    loadstring(game:HttpGet("https://freenote.biz/raw/gtd4gdmszj"))()
+end)
+
+movesetTab:Button("Mixed Moveset (The Strongest Hero)", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Trying-glitch/RlxProject/main/custommoveset.txt"))()
+end)
+
+movesetTab:Button("Hakari Moveset (The Strongest Hero)", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Wi-sp/Limitless-legacy/refs/heads/main/GUI"))()
+end)
+
+movesetTab:Button("KJ V2 Moveset (The Strongest Hero)", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Gokou300/Kj-script-moveset-new-update/refs/heads/main/Kj%20script%20moveset%20credit%20to%20Manuth"))()
+
+end)
+
+movesetTab:Button("Sukuna V3 Moveset (Blade Master)", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/berrizscript/Scripts_/refs/heads/main/Sukuna%20Beta"))()
+end)
+
+movesetTab:Button("KJ V3 Moveset (The Strongest Hero)(Key: KJAlpha)", function()
+    loadstring(game:HttpGet("https://rawscripts.net/raw/The-Strongest-Battlegrounds-Best-KJ-Script-19976"))()
+end)
+
+movesetTab:Button("Dio V2 Moveset (Hero Hunter)", function()
+    getgenv().Settings = {
+        Morph = false, -- (true/false)
+        TalkInChat = true -- (true/false) If you want to chat for moves
+    }
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Medley-Taboritsky/RobloxScripting/refs/heads/main/DIO_Garou_TSB"))()    
+end)
+
+movesetTab:Button("Yuji Moveset (Hero Hunter)", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/kaledagoat/-kendjendjen/refs/heads/main/yuji%20itadori.lua"))()
+end)
+
+movesetTab:Button("Jun V2 Moveset (The Strongest Hero)", function()
+    loadstring(game:HttpGet("https://pastefy.app/1m6k8kOE/raw"))()
+end)
+
+movesetTab:Button("Hakari V2 Moveset (The Strongest Hero)", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/eEDYWj8p"))()
+end)
+
+movesetTab:Button("KJ V1.3 Moveset (The Strongest Hero)(Use In Movesets Section)", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/xVicity/GLACIER/main/LATEST.lua"))()
+end)
+
+movesetTab:Button("Gojo V0.1 Moveset (Wild Psychic)(Use In Movesets Section)", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/xVicity/GLACIER/main/LATEST.lua"))()
+end)
+
+movesetTab:Button("Yuji/Sukuna Moveset (Hero Hunter)(Use In Movesets Section)", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/xVicity/GLACIER/main/LATEST.lua"))()
+end)
+
+movesetTab:Button("Gojo V0.5 Moveset (The Strongest Hero)(Use In Movesets Section)", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/xVicity/GLACIER/main/LATEST.lua"))()
+end)
+
+movesetTab:Button("Suiryu Moveset (Hero Hunter)(Fake)", function()
+    loadstring(game:HttpGet("https://gist.githubusercontent.com/kjremaker/b092496fc11a57e2c50477154176fa3e/raw/2148f00a036a1799118541765675f3f6a0f8adae/GAROU%20TO%20SURIYU%20BETTER%20THAN%20THE%20OTHERS%20FR"))()
+end)
+
+movesetTab:Button("Gojo V0.7 Moveset (The Strongest Hero)", function()
+    loadstring(game:HttpGet("https://rawscripts.net/raw/The-Strongest-Battlegrounds-Gojo-Moveset-Script-FIX-16704"))()
+end)
+
+movesetTab:Button("KJ V1.5 Moveset (Hero Hunter)", function()
+    loadstringloadstring(game:HttpGet("https://raw.githubusercontent.com/h8h88/hubfr/main/hubfr"))()
+end)
+
+movesetTab:Button("Saga Moveset (Hero Hunter)", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/LolnotaKid/CustomV2/refs/heads/main/CustomAnimV2.txt"))()
+end)
+
+movesetTab:Button("Bomb Moveset (The Strongest Hero)", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Gokou300/Gokou300/refs/heads/main/BOMB_SAITAMA_TSB"))()
+end)
+
+movesetTab:Button("KJ V2.5 Moveset (The Strongest Hero)(Use In Characters Selection)", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Herobrine3276762/KJ/refs/heads/main/KJ-SCRIPT-MADE-BY-%40HEROBRINE-ON-DISCORD.lua"))()
+end)
+
+movesetTab:Button("Child Emperor Moveset (The Strongest Hero)", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/CaXFZ2S2"))()
+end)
+
+movesetTab:Button("KJ V4 Moveset (The Strongest Hero)(Use in Characters Section)", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Gokou300/Gokou300/main/kJ%20Moveset%20V2%20by%20camerawoman"))()
+end)
+
+movesetTab:Button("KJ V0.5 Moveset (The Strongest Hero)(Use In Movesets Section)", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Bre5be123/Wiwi/refs/heads/main/Hi?token=GHSAT0AAAAAACYTRGTUYFHZ33RCOAVZWLJQZYU4BEQ"))()
+end)
+
+movesetTab:Button("Sukuna V0.5 Moveset (The Strongest Hero)(Use In Movesets Section)", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Gokou300/Gokou300/refs/heads/main/local%20983185f7b0f46a55e497cc29b597ce56lol%20camera%20hub%20x%209.0%20TSB"))()
+end)
+
+movesetTab:Button("Coconut Moveset (The Strongest Hero)(Use In Movesets Section)", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Gokou300/Gokou300/refs/heads/main/local%20983185f7b0f46a55e497cc29b597ce56lol%20camera%20hub%20x%209.0%20TSB"))()
+end)
+
+movesetTab:Button("Skibidi Cat Moveset (The Strongest Hero)(Use In Movesets Section)", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Gokou300/Gokou300/refs/heads/main/local%20983185f7b0f46a55e497cc29b597ce56lol%20camera%20hub%20x%209.0%20TSB"))()
+end)
+
+movesetTab:Button("Megumi Moveset (Hero Hunter)(Use In Movesets Section)", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Gokou300/Gokou300/refs/heads/main/local%20983185f7b0f46a55e497cc29b597ce56lol%20camera%20hub%20x%209.0%20TSB"))()
+end)
+
+movesetTab:Button("Sonic Exe Moveset (Hero Hunter)", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Nova2ezz/sonic-exe-moveset-3/refs/heads/main/3"))()
+end)
+
+movesetTab:Button("Maximum Output Gojo Moveset (The Strongest Hero)", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Gokou300/Gokou300/refs/heads/main/GOJO_MAXIMUM_OUTPUT_SAITAMA_TSB"))()
+end)
+
+movesetTab:Button("Gojo V2 Moveset (Hero Hunter)", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Bre5be123/Ha/refs/heads/main/README"))()
+end)
+
+movesetTab:Button("Bomber Moveset (The Strongest Hero)", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Bre5be123/Blahblahblah/refs/heads/main/Justincase?token=GHSAT0AAAAAACYTRGTUINUWCEL2Q2B67X5YZYXHS7Q"))()
+end)
+
+movesetTab:Button("Chara Moveset (Blade Master)", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Bre5be123/Blahblahblah/refs/heads/main/Huh?token=GHSAT0AAAAAACYTRGTUGDRAHY3HBIRRYNGSZYXUZ5A"))()
+end)
+
+movesetTab:Button("Floppa Moveset (Destructive Cyborg)(Use In Characters Section)", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Bre5be123/Blahblahblah/refs/heads/main/Floppa?token=GHSAT0AAAAAACYTRGTUDXPVPL4WOPUWYH5IZYXU6GA"))()
+end)
+
+movesetTab:Button("Golden Moveset (The Strongest Hero)", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Showcaser1/golden-character/refs/heads/main/op"))()
+end)
+
+movesetTab:Button("Mahito V2 Moveset (The Strongest Hero)", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Kenjihin69/Kenjihin69/refs/heads/main/Mahitotsbupdate"))()
+end)
+
+movesetTab:Button("Gojo Domain Moveset (The Strongest Hero)", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/777Q4QDN", true))()
+end)
+
+movesetTab:Button("Oblivion Gourd Moveset (The Strongest Hero)", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/invertedth/OblivionGourd/refs/heads/main/Dabestscirpt"))()
+end)
+
+movesetTab:Button("Slapper Moveset (The Strongest Hero)", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Bre5be123/Ha/refs/heads/main/Slapper-Moveset"))()
+    game.Players.LocalPlayer.Backpack.Uppercut:Destroy()
+end)
+
+movesetTab:Button("Minos Prime Moveset (The Strongest Hero)", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Bre5be123/Ha/refs/heads/main/MINO"))()
+end)
+
+movesetTab:Button("Volta Moveset (Deadly Ninja)", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Reapvitalized/TSB/refs/heads/main/VOLTA.lua"))()
+end)
+
+movesetTab:Button("Shinjuku Yuji Moveset (Hero Hunter)", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Kenjihin69/Kenjihin69/refs/heads/main/Yuji%20early%20access"))()
+end)
+
+movesetTab:Button("Caseoh Moveset (The Strongest Hero)", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Bre5be123/Ha/refs/heads/main/Caseoh"))()
+end)
+
+movesetTab:Button("Minos Prime V2 Moveset (Hero Hunter)", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Bre5be123/Ha/refs/heads/main/Mino%20v2"))()
+end)
+
+movesetTab:Button("Random Moveset (The Strongest Hero)", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Bre5be123/Ha/refs/heads/main/Random"))()
+end)
+
+movesetTab:Button("Minos Prime V3 Moveset (Hero Hunter)", function()
+    _G.SkipIntro = false -- set to false if you don't want to skip the intro
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Dragonfly5101/Minosr/refs/heads/main/Prime%20Minos.txt"))()
+end)
+
+movesetTab:Button("Greeny Moveset (The Strongest Hero)", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/D5v5dzzz/Greeny-SCript-V2/refs/heads/main/Greeny%20Script%20Upd%20V2"))()
+end)
+
+movesetTab:Button("Gojo V3 Moveset (The Strongest Hero)", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/skibiditoiletfan2007/BaldyToSorcerer/refs/heads/main/LatestV2.lua"))()
+end)
+
+movesetTab:Button("Shibuya Toji V2 Moveset (The Strongest Hero)", function()
+    loadstring(game:HttpGet("https://pastefy.app/Z59beSzJ/raw"))()
+end)
+
+movesetTab:Button("Shibuya Toji V3 Moveset (The Strongest Hero)", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/FlowersTsb/Moveset/refs/heads/main/ShibuyaToji"))()
+end)
+
+movesetTab:Button("Todo Moveset (The Strongest Hero)", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Nova2ezz/Todo-moveset/refs/heads/main/Todo"))()
+end)
+
+movesetTab:Button("Naruto Moveset (The Strongest Hero)", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Darker-TheDarkestGuy/Scripts/refs/heads/main/Naruto%20Moveset"))()
+end)
+
+movesetTab:Button("Gojo V1.5 Moveset (The Strongest Hero)", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Nova2ezz/Gojo/refs/heads/main/Gojomoveset"))()
+end)
+
+movesetTab:Button("Unsealed Gojo V2 Moveset (The Strongest Hero)", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/zF6Rdky0"))()
+end)
+
+movesetTab:Button("Sukuna V0.8 Moveset (The Strongest Hero)", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Nova2ezz/Sukuna/refs/heads/main/KenjakuTsbOnYt"))()
+end)
+
+movesetTab:Button("Okarun Moveset (The Strongest Hero)", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/FlowersTsb/Moveset/refs/heads/main/FlowersOkarun"))()
+end)
+
+movesetTab:Button("Deku V2 Moveset (The Strongest Hero)", function()
+    loadstring(game:HttpGet("https://paste.ee/r/JHtMr"))()
+end)
+
+movesetTab:Button("Gojo V4 Moveset (The Strongest Hero)", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Gokou300/Gokou300/refs/heads/main/Saitama_To_Gojo_STG"))()
+end)
+
+movesetTab:Button("Yuji V0.8 Moveset (The Strongest Hero)", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/damir512/SaitamaToYuji/main/SaitamaToYuji.txt"))()
+end)
+
+movesetTab:Button("JJS Gojo Moveset (The Strongest Hero)", function()
+    loadstring(game:HttpGet("https://gist.githubusercontent.com/JcBoomin/a63e9ac3e90cef03ecf37e997fd21632/raw/98b567b81f61bb30042e0078b78f3fb24685fb8d/Gojo", true))()
+end)
+
+movesetTab:Button("Kashimo Moveset (The Strongest Hero)", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/damir512/Kashimo/main/Protected_7491278457865044.txt"))()
+end)
+
+movesetTab:Button("Geto Suguru Moveset (Wild Psychic)", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Nova2ezz/Geto-suguru/refs/heads/main/Nova2ezz"))()
+end)
+
+movesetTab:Button("Purple Flamingo Moveset (The Strongest Hero)", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Darker-TheDarkestGuy/Scripts/refs/heads/main/Purple%20Flamingo%20Moveset"))()
+end)
+
+movesetTab:Button("Elter Moveset (The Strongest Hero)", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Darker-TheDarkestGuy/Scripts/refs/heads/main/Elter%20Moveset"))()
+end)
+
+movesetTab:Button("A-60 Moveset (Destructive Cyborg)(Use In Characters Section)", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Darker-TheDarkestGuy/Scripts/refs/heads/main/A-60%20moveset"))()
+end)
+
+movesetTab:Button("A-Train V2 Moveset (Hero Hunter)", function()
+    loadstring(game:HttpGet("https://paste.ee/r/AnZ5j"))()
+end)
+
+movesetTab:Button("Wind Turbo Moveset (Every Characters)(Use In Characters Selection)", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/TemuWelcomeChildempeoror/Temuwind-turbo/refs/heads/main/WINDTURBOBYWELXOME%25"))()
+end)
+
+movesetTab:Button("Weakest Dummy Moveset (The Strongest Hero)", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/NoobieScripter/NoobieScripter/refs/heads/main/Weakest%20Dummy%20V1", true))()
+end)
+
+movesetTab:Button("Kyra Toji Moveset (Blade Master)", function()
+    loadstring(game:HttpGet("https://paste.ee/r/0uIxM"))()
+end)
+
+movesetTab:Button("Super Senior Gojo Moveset (The Strongest Hero)", function()
+    loadstring(game:HttpGet("https://pastefy.app/r6LnIF2W/raw"))()
+end)
+
+movesetTab:Button("Brainrot Moveset (The Strongest Hero)", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Darker-TheDarkestGuy/Scripts/refs/heads/main/Brainrot%20Moveset"))()
+end)
+
+movesetTab:Button("Speed Of Light Moveset (Every Characters)", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Darker-TheDarkestGuy/Scripts/refs/heads/main/Speed%20Of%20Light%20Moveset"))()
+end)
+
+movesetTab:Button("Vegeta Moveset (Hero Hunter)", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/JcBoomin/UEVEGETA/refs/heads/main/Script"))()
+end)
+
+movesetTab:Button("Mahoraga Moveset (The Strongest Hero)", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/gYrU8dyL"))()
+end)
+
+movesetTab:Button("Hakari V3 Moveset (Hero Hunter)", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/damir512/hakari/main/Protected_5980408162046394.txt"))()
+end)
+
+movesetTab:Button("Jotaro V2 Moveset (The Strongest Hero)", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/DuckTheSecond/JotaroV1/refs/heads/main/Official", true))();
+end)
+
+movesetTab:Button("Sukuna V1.5 Moveset (Hero Hunter)", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Yourfavoriteguy/Sukuna/refs/heads/main/CLEAVE!"))()
+end)
+
+movesetTab:Button("Megumi X Mahoraga Moveset (Hero Hunter)", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Darker-TheDarkestGuy/Scripts/refs/heads/main/Megumi%20X%20Mahoraga%20Moveset"))()
+end)
+
+movesetTab:Button("Sun Moveset (The Strongest Hero)", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Darker-TheDarkestGuy/Scripts/refs/heads/main/Sun%20Moveset"))()
+end)
+
+movesetTab:Button("GT!Chara Moveset (The Strongest Hero)", function()
+    loadstring(game:HttpGet("https://paste.ee/r/0yYkO"))()
+end)
+
+movesetTab:Button("Blast Moveset (The Strongest Hero)", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/TAEKWADO/Blaster-Moveset/refs/heads/main/Blast%20Moveset"))()
+end)
+
+movesetTab:Button("Nameless Moveset (The Strongest Hero)", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/XQZ-official/NamelessMovesetOriginal/refs/heads/main/Nameless%20Obfuscated.txt"))()
+end)
+
+movesetTab:Button("Yuta Moveset (Blade Master)", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/damir512/AtomicToYuta/main/Protected_8122576078506000.txt"))()
+end)
+
+movesetTab:Button("Mastery Deku Moveset (Hero Hunter)", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Darker-TheDarkestGuy/Scripts/refs/heads/main/Mastery%20Deku%20Moveset"))()
+end)
+
+movesetTab:Button("Zeno Moveset (The Strongest Hero)", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Darker-TheDarkestGuy/Scripts/refs/heads/main/Zeno%20Moveset"))()
+end)
+
+movesetTab:Button("Venom Moveset (Hero Hunter)", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Yourfavoriteguy/VENOM/refs/heads/main/EARLYACCESS"))()
+end)
+
+movesetTab:Button("Toji V0.5 Moveset (Blade Master)", function()
+    loadstring(game:HttpGet("https://rawscripts.net/raw/The-Strongest-Battlegrounds-Toji-moveset-for-Atomic-Samurai-22498"))()
+end)
+
+movesetTab:Button("Sans V2 Moveset (The Strongest Hero)", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/AeryAlex/Scripts/refs/heads/main/Sans%20Moveset%20(Obsfucted).txt"))()
+end)
+
+movesetTab:Button("Floating Girl Moveset (Blade Master)", function()
+    loadstring(game:HttpGet("https://rawscripts.net/raw/The-Strongest-Battlegrounds-Floating-girl-discontinued-credits-to-reap-22864"))()
+end)
+
+movesetTab:Button("Geto Moveset (Hero Hunter)", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/DuckTheSecond/Duck-sHUB/refs/heads/main/HUBv1"))()
+end)
+
+movesetTab:Button("Heian Era Sukuna Moveset (Hero Hunter)", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/damir512/sukunaongarou/main/Protected_7222200088522532.txt", true))()
+end)
+
+movesetTab:Button("Gojo Six Eyes Moveset (The Strongest Hero)", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/NoobieScripter/NoobieScripter/refs/heads/main/GOJO%20V2", true))()
+end)
+
+movesetTab:Button("SuperHuman Moveset (The Strongest Hero)", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/AeryAlex/Scripts/refs/heads/main/SuperHuman%20Script%20(Obsfucted).txt"))()
+end)
+
+movesetTab:Button("King Of Curses Moveset (The Strongest Hero)", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/aerialasf/roblox-scripts-by-aerialasf-obviously-lol-and-made-by-xqz_zero-too-lol-because-yeas-and-yeah/refs/heads/main/KingOfCurses.lua"))()
+end)
+
+movesetTab:Button("Scriptified Moveset (The Strongest Hero)", function()
+    loadstring(game:HttpGet("https://pastefy.app/ldknjNa9/raw", true))()
+end)
+
+movesetTab:Button("Mastery Atomic Samurai V2 (Blade Master)", function()
+    loadstring(game:HttpGet("https://gist.githubusercontent.com/envix2759/c44be0f240a1b157b1723deb69bdd212/raw/af95b54853ba82fcb164c0c693c67b246e7a3cc6/gistfile1.txt"))()
+end)
+
+movesetTab:Button("Cosmic Garou Moveset (Hero Hunter)", function()
+    loadstring(game:HttpGet("https://gist.githubusercontent.com/envix2759/3598eaefc37ef3a8192636b5d0d8fef6/raw/ff5b84f79d68b6a70692c6bc30cd0c4c728b16df/gistfile1.txt"))()
+end)
+
+movesetTab:Button("GodHuman Moveset (The Strongest Hero)", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/AeryAlex/Scripts/refs/heads/main/GodHuman%20Script%20(Obsfucted).txt"))()
+end)
+
+movesetTab:Button("Diddy Moveset (Hero Hunter)", function()
+    loadstring(game:HttpGet("https://paste.ee/r/gKC8V"))()
+end)
+
+movesetTab:Button("Star Glitcher Moveset (Hero Hunter)", function()
+    loadstring(game:HttpGet("https://paste.ee/r/mmQkO"))()
+end)
+
+movesetTab:Button("Aizen TYBW Moveset (Deadly Ninja)", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Nova2ezz/AizenTYBW/refs/heads/main/Novahitta"))()
+end)
+
+movesetTab:Button("Arcophenix Moveset (Wild Psychic)", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/SerialdesignationV-collab/Arcophenix-Special-/refs/heads/main/Arcophenix(Protected).txt"))()
+end)
+
+movesetTab:Button("Boros Moveset (The Strongest Hero)", function()
+    loadstring(game:HttpGet("https://paste.ee/r/XPIH5"))()
+end)
+
+movesetTab:Button("Chainsaw Man Moveset (Deadly Ninja)", function()
+    loadstring(game:HttpGet("https://gist.githubusercontent.com/GoldenHeads2/0fd8d36993c850f3fac89e5adf793076/raw/ab4f5a42bd0b2e24a32a46301d533ea849ca771c/gistfile1.txt"))()
+end)
+
+movesetTab:Button("Kyra KJ Moveset (The Strongest Hero)", function()
+    loadstring(game:HttpGet("https://gist.githubusercontent.com/GoldenHeads2/5fe3178dff916f988d319c3bd5e4fc01/raw/b250ee6f967c4e84195a76ab7915fb1d79b53326/gistfile1.txt"))()
+end)
+
+movesetTab:Button("Vexor Moveset (The Strongest Hero)", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Reapvitalized/TSB/refs/heads/main/VEXOR.lua"))()
+end)
+
+movesetTab:Button("Freddy Moveset (Hero Hunter)", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/Ft5psDmD"))()
+end)
+
+movesetTab:Button("Mahito Moveset (Domain Expansion)(Martial Artist)", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/GreatestLime4K/mahitotsb/refs/heads/main/Protected_6381580361331378.txt"))()
+end)
+
+movesetTab:Button("Okarun Moveset (Badass)(Hero Hunter)", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/FlowersTsb/Moveset/refs/heads/main/FlowersOkarun"))()
+end)
