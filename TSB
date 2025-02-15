@@ -4,6 +4,7 @@ local s = VLib:Window("Alkorv Moveset Hub", "TSB", "😏")
 
 -- Movesets Tab
 local movesetTab = s:Tab("Movesets")
+local hubsTab = s:Tab("Hubs")
 
 movesetTab:Button("KJ Moveset (The Strongest Hero)", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/RathaTepmanuth10/Kj-script-/main/Kj"))()
@@ -856,3 +857,15 @@ end)
 movesetTab:Button("Okarun Moveset (Badass)(Hero Hunter)", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/FlowersTsb/Moveset/refs/heads/main/FlowersOkarun"))()
 end)
+
+hubsTab:Button("Kade Hub v2.2.8", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/skibiditoiletfan2007/KadeHubRepository/main/Latest.lua"))()
+)
+
+hubsTab:Button("Ray Makka Hub", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/JayXSama/ray-makk/main/Loader"))()
+)
+
+hubsTab:Button("Instant flowing kill", function()
+    loadstring(game:HttpGet("https://pastefy.app/afHQ7oyj/raw"))()
+)
