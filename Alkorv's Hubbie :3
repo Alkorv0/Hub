@@ -2422,17 +2422,6 @@ Callback = <function> - The function of the button.
 ]]
 
 local Tab = Window:MakeTab({
-	Name = "Auto Combos",
-	Icon = "rbxassetid://932460399",
-	PremiumOnly = false
-})
-
---[[
-Name = <string> - The name of the button.
-Callback = <function> - The function of the button.
-]]
-
-local Tab = Window:MakeTab({
 	Name = "Scripts",
 	Icon = "rbxassetid://46186544",
 	PremiumOnly = false
