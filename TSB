@@ -862,6 +862,10 @@ hubsTab:Button("Kade Hub v2.2.8", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/skibiditoiletfan2007/KadeHubRepository/main/Latest.lua"))()
 )
 
+hubsTab:Button("Phantasm Rework", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/ATrainz/Phantasm/refs/heads/main/Phantasm.lua"))()
+)
+
 hubsTab:Button("Ray Makka Hub", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JayXSama/ray-makk/main/Loader"))()
 )
