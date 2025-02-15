@@ -860,16 +860,16 @@ end)
 
 hubsTab:Button("Kade Hub v2.2.8", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/skibiditoiletfan2007/KadeHubRepository/main/Latest.lua"))()
-)
+end)
 
 hubsTab:Button("Phantasm Rework", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/ATrainz/Phantasm/refs/heads/main/Phantasm.lua"))()
-)
+end)
 
 hubsTab:Button("Ray Makka Hub", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JayXSama/ray-makk/main/Loader"))()
-)
+end)
 
 hubsTab:Button("Instant flowing kill", function()
     loadstring(game:HttpGet("https://pastefy.app/afHQ7oyj/raw"))()
-)
+end)
