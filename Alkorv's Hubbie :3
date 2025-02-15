@@ -2322,7 +2322,7 @@ Callback = <function> - The function of the button.
 Tab:AddButton({
 	Name = "Zoro V2 Moveset (Blade Master)",
 	Callback = function()
-      		loadstring(game:HttpGet("https://raw.githubusercontent.com/Darker-TheDarkestGuy/Special-Movesets/refs/heads/main/Zoro%20Moveset"))()
+      	loadstring(game:HttpGet("https://raw.githubusercontent.com/Darker-TheDarkestGuy/Special-Movesets/refs/heads/main/Zoro%20Moveset"))()
   	end    
 })
 
@@ -2334,7 +2334,7 @@ Callback = <function> - The function of the button.
 Tab:AddButton({
 	Name = "Hallow Moveset (Brutal Demon)",
 	Callback = function()
-      		loadstring(game:HttpGet("https://raw.githubusercontent.com/Darker-TheDarkestGuy/Special-Movesets/refs/heads/main/Hallow%20Moveset"))()
+      	loadstring(game:HttpGet("https://raw.githubusercontent.com/Darker-TheDarkestGuy/Special-Movesets/refs/heads/main/Hallow%20Moveset"))()
   	end    
 })
 
@@ -2346,7 +2346,7 @@ Callback = <function> - The function of the button.
 Tab:AddButton({
 	Name = "Sonic V2 Moveset (Hero Hunter)",
 	Callback = function()
-      		loadstring(game:HttpGet("https://raw.githubusercontent.com/Darker-TheDarkestGuy/Special-Movesets/refs/heads/main/Sonic%20Moveset"))()
+      	loadstring(game:HttpGet("https://raw.githubusercontent.com/Darker-TheDarkestGuy/Special-Movesets/refs/heads/main/Sonic%20Moveset"))()
   	end    
 })
 
@@ -2393,14 +2393,14 @@ Callback = <function> - The function of the button.
 Tab:AddButton({
 	Name = "Kade Hub (No Key)",
 	Callback = function()
-      		loadstring(game:HttpGet("https://raw.githubusercontent.com/skibiditoiletfan2007/KadeHubRepository/main/Latest.lua"))()
+      	loadstring(game:HttpGet("https://raw.githubusercontent.com/skibiditoiletfan2007/KadeHubRepository/main/Latest.lua"))()
   	end    
 })
 
 Tab:AddButton({
 	Name = "Ray Makk Hub (No Key)",
 	Callback = function()
-      		loadstring(game:HttpGet("https://raw.githubusercontent.com/JayXSama/ray-makk/main/Loader"))()
+      	loadstring(game:HttpGet("https://raw.githubusercontent.com/JayXSama/ray-makk/main/Loader"))()
   	end    
 })
 
@@ -2412,7 +2412,7 @@ Callback = <function> - The function of the button.
 Tab:AddButton({
 	Name = "KJ Hub (BEST)",
 	Callback = function()
-      		loadstring(game:HttpGet("https://raw.githubusercontent.com/AlperPro/shhh/refs/heads/main/KJ%20Script.lua"))()
+      	loadstring(game:HttpGet("https://raw.githubusercontent.com/AlperPro/shhh/refs/heads/main/KJ%20Script.lua"))()
   	end    
 })
 
@@ -2444,7 +2444,7 @@ Name = <string> - The name of the section.
 Tab:AddButton({
 	Name = "Instant Kill (Need Key)",
 	Callback = function()
-      		loadstring(game:HttpGet("https://pastefy.app/REPoaFWC/raw",true))();
+      	loadstring(game:HttpGet("https://pastefy.app/REPoaFWC/raw",true))();
   	end    
 })
 
@@ -2456,7 +2456,7 @@ Callback = <function> - The function of the button.
 Tab:AddButton({
 	Name = "Auto Void Kill (Use Flowing Water)",
 	Callback = function()
-      		loadstring(game:HttpGet("https://pastefy.app/afHQ7oyj/raw"))()
+      	loadstring(game:HttpGet("https://pastefy.app/afHQ7oyj/raw"))()
   	end    
 })
 
@@ -2468,7 +2468,7 @@ Callback = <function> - The function of the button.
 Tab:AddButton({
 	Name = "Steal Kill",
 	Callback = function()
-      		loadstring(game:HttpGet("https://pastefy.app/v7noKGy5/raw"))()
+      	loadstring(game:HttpGet("https://pastefy.app/v7noKGy5/raw"))()
   	end    
 })
 
@@ -2480,7 +2480,19 @@ Callback = <function> - The function of the button.
 Tab:AddButton({
 	Name = "Camlock",
 	Callback = function()
-      		loadstring(game:HttpGet("https://pastefy.app/cfMW31sf/raw"))()
+      	loadstring(game:HttpGet("https://pastefy.app/cfMW31sf/raw"))()
+  	end    
+})
+
+--[[
+Name = <string> - The name of the button.
+Callback = <function> - The function of the button.
+]]
+
+Tab:AddButton({
+	Name = "Autoblock V5",
+	Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Cyborg883/TSB/refs/heads/main/CombatGui"))()
   	end    
 })
 
