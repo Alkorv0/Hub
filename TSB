@@ -508,30 +508,6 @@ movesetTab:Button("Child Emperor Moveset (The Strongest Hero)", function()
     loadstring(game:HttpGet("https://pastebin.com/raw/CaXFZ2S2"))()
 end)
 
-movesetTab:Button("KJ V4 Moveset (The Strongest Hero)(Use in Characters Section)", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Gokou300/Gokou300/main/kJ%20Moveset%20V2%20by%20camerawoman"))()
-end)
-
-movesetTab:Button("KJ V0.5 Moveset (The Strongest Hero)(Use In Movesets Section)", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Bre5be123/Wiwi/refs/heads/main/Hi?token=GHSAT0AAAAAACYTRGTUYFHZ33RCOAVZWLJQZYU4BEQ"))()
-end)
-
-movesetTab:Button("Sukuna V0.5 Moveset (The Strongest Hero)(Use In Movesets Section)", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Gokou300/Gokou300/refs/heads/main/local%20983185f7b0f46a55e497cc29b597ce56lol%20camera%20hub%20x%209.0%20TSB"))()
-end)
-
-movesetTab:Button("Coconut Moveset (The Strongest Hero)(Use In Movesets Section)", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Gokou300/Gokou300/refs/heads/main/local%20983185f7b0f46a55e497cc29b597ce56lol%20camera%20hub%20x%209.0%20TSB"))()
-end)
-
-movesetTab:Button("Skibidi Cat Moveset (The Strongest Hero)(Use In Movesets Section)", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Gokou300/Gokou300/refs/heads/main/local%20983185f7b0f46a55e497cc29b597ce56lol%20camera%20hub%20x%209.0%20TSB"))()
-end)
-
-movesetTab:Button("Megumi Moveset (Hero Hunter)(Use In Movesets Section)", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Gokou300/Gokou300/refs/heads/main/local%20983185f7b0f46a55e497cc29b597ce56lol%20camera%20hub%20x%209.0%20TSB"))()
-end)
-
 movesetTab:Button("Sonic Exe Moveset (Hero Hunter)", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Nova2ezz/sonic-exe-moveset-3/refs/heads/main/3"))()
 end)
@@ -868,6 +844,14 @@ end)
 
 hubsTab:Button("Ray Makka Hub", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/JayXSama/ray-makk/main/Loader"))()
+end)
+
+hubsTab:Button("Instant flowing kill", function()
+    loadstring(game:HttpGet("https://pastefy.app/afHQ7oyj/raw"))()
+end)
+
+hubsTab:Button("Glacier Hub", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/xVicity/GLACIER/main/LATEST.lua"))()
 end)
 
 hubsTab:Button("Instant flowing kill", function()
