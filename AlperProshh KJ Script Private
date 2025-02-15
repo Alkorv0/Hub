@@ -1,4 +1,4 @@
-local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/AlperPro/shhh/main/oriontestsreal')))()
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/Alkorv0/Hub/refs/heads/main/Orion%20lib%20test')))()
 local Window = OrionLib:MakeWindow({Name = "KJ Script, Made By lloydgarmadon43 in discord!", HidePremium = false, SaveConfig = true, ConfigFolder = "lloydgarmadon43scripts"})
 local BaseMovesReal = Window:MakeTab({
 	Name = "Base Moves",
